@@ -1,0 +1,92 @@
+.slide
+  +bg(4jpg)
+  position: relative
+  
+  @media(min-width:1200px)
+    background-size: 139%
+    background-position: center 31%
+  h1
+    margin-top: 0.8rem
+  &::before 
+    z-index: 1
+    content: ''
+    width: 100%
+    height: 100%
+    bottom: 0
+    left: 0
+    top: 0
+    position: absolute
+    opacity: .8
+    background-image: linear-gradient(to top, rgba(169, 187, 63, 0.71) 0%, rgba(80, 59, 28, 0.71) 100%)
+  &.non_content
+    min-height: 275px
+    background-position: center 50%
+    opacity: .8
+    &::before
+      display: none
+  .container
+    position: relative
+    padding: 6rem 0 2rem
+    z-index: 2
+    
+    &::after
+      content: ''
+      width: 21px
+      height: 66px
+      +bg(mouse)
+      display: block
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      margin: 0 auto
+    @media(max-width:960px)
+      padding: 2rem 0 2rem
+      &:after
+        display: none
+  button
+    margin: 3rem auto
+    display: block
+    border-radius: 0.15rem
+    background-color: #a9bb3f
+    padding: .4rem 1.5rem
+    height: auto
+  img
+    width: auto
+  h1
+    font:
+      size: 3rem
+      weight: 700
+      style: normal
+    text-align: center
+    word-wrap: break-word
+    color: #ffffff
+    dfn
+      font:
+        style: normal
+      color: #a9bb3f
+  &__cube
+    display: flex
+    flex-direction: row
+    justify-content: center
+    flex-wrap: wrap
+    .ele
+      
+      
+      background-color: #503b1c
+      padding: .8rem 0
+      border-right: 0.05rem solid #ffffff
+      font:
+        size: .8rem
+        weight: 300 
+      text-align: center
+      color: #fafafa
+      &:last-child
+        border: 0
+      @media(min-width:1200px)
+        width: 20.4% !important
+        margin: 0 !important
+      @media(max-width:1200px)
+        border: 0
+        margin: .5rem
+

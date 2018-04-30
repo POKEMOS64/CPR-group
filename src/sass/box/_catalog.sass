@@ -1,0 +1,87 @@
+.catalog
+  img
+    width: auto
+  h3
+    font:
+      size: 1rem
+      weight: 700
+    color: #443e49
+  &__group
+    .ele
+      position: relative
+      border: 1px solid #a9bb3f
+      padding: 0
+      margin-bottom: 1rem
+      img
+        width: 100%
+        margin: 0
+      &_text
+        display: none
+        position: absolute
+        top: 0
+        bottom: 0
+        height: 100%
+        width: 100%
+        padding: 1.25rem
+        box-sizing: border-box
+        background-color: hsla(36, 48%, 21%, 0.92)
+        color: #fafafa
+        &>div
+          display: flex
+          justify-content: flex-start
+          align-items: center
+          flex-direction: column
+        .h1
+          width: 100%
+          text-align: center
+          font:
+            size: 1rem
+          @media(max-width:600px)
+            font:
+              size: 2rem
+        li
+          font:
+            size: .8rem
+            weight: 300
+          @media(max-width:600px)
+            font:
+              size: 1.2rem
+          span
+            font:
+              weight: 300
+      &:hover
+        .ele_text
+          display: block
+    .owl-nav
+      margin: 0 auto
+    .owl-prev
+      +bg(prev)
+      float: left
+      width: 21px
+      height: 40px
+    .owl-next
+      +bg(next)
+      float: right
+      width: 21px
+      height: 40px
+    .owl-dots
+      margin: 0 auto
+      height: 42px
+      display: flex
+      flex-direction: row
+      justify-content: center
+      .owl-dot
+        width: 1.65rem
+        height: 1.65rem
+        border-radius: 50px
+        border: 1px solid #a9bb3f
+        margin: 5px
+        &.active
+          span
+            display: block
+            width: 0.95rem
+            height: 0.95rem
+            margin: .28rem auto
+            border-radius: 50px
+            background: #a9bb3f
+    
